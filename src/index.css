@@ -84,7 +84,7 @@ body,
 
 @font-face {
   font-family: "foolish";
-  src: url("./assets/fonts/stay_foolish/StayFoolish.otf")
+  src: url("/fonts/stay_foolish/StayFoolish.otf")
 }
 
 @font-face {

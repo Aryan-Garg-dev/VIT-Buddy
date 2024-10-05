@@ -366,7 +366,7 @@ const GPALookup = ({
 })=>{
   return (
     <Drawer open={open} onOpenChange={setIsOpen}>
-      <DrawerContent className="mb-5">
+      <DrawerContent className="mb-5 bg-primary-foreground">
         <DrawerHeader className="mt-4">
           <DrawerTitle className="font-default text-4xl tracking-wide text-center">Your GPA</DrawerTitle>
           <DrawerDescription className="font-default text-2xl tracking-wide text-center">This is calculated based on the inputs you provided.</DrawerDescription>

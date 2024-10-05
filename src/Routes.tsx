@@ -20,10 +20,10 @@ type Route = {
 export const routes: Route[] = [
   { path: "/", element: <HomeLayout meta={SEOContent.home}><Home /></HomeLayout> },
   { path: "/services", children: [
-    { path: "/cgpa", element: <BaseLayout meta={SEOContent.cgpa}><BaseLayout><ComingSoon /></BaseLayout></BaseLayout> },
-    { path: "/ffcs-planner", element: <BaseLayout meta={SEOContent.ffcs}><BaseLayout><ComingSoon /></BaseLayout></BaseLayout> },
+    { path: "/cgpa", element: <BaseLayout meta={SEOContent.cgpa}><ComingSoon /></BaseLayout> },
+    { path: "/ffcs-planner", element: <BaseLayout meta={SEOContent.ffcs}><ComingSoon /></BaseLayout> },
     { path: "/gpa", element: <BaseLayout meta={SEOContent.gpa}><GPACalculator /></BaseLayout> },
-    { path: "/attendance", element: <BaseLayout meta={SEOContent.attendance}><BaseLayout><ComingSoon /></BaseLayout></BaseLayout> },
+    { path: "/attendance", element: <BaseLayout meta={SEOContent.attendance}><ComingSoon /></BaseLayout> },
   ] },
   { path: "/test", element: <BaseLayout><Loading /></BaseLayout> },
   { path: "*", element: <BaseLayout meta={SEOContent.notFound}><NotFound /></BaseLayout> },

@@ -17,11 +17,13 @@ export type GradeCreditList = {
 }[];
 
 export const validateList = (list: GradeCreditList): boolean =>{
+  let isValueProvided = false;
   for (const item of list){
     if (item.Credits == 0 && item.Grade == "") continue;
-    if (item.Credits == 0 || item.Grade == "") return false;
+    else if (item.Credits == 0 || item.Grade == "") return false;
+    else isValueProvided = true;
   }
-  return true;
+  return isValueProvided;
 }
 
 export const calculateGPA = (data: GradeCreditList): number => {
