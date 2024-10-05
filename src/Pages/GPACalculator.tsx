@@ -152,7 +152,7 @@ export const GPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] mt-2 mx-2">
+      <Card className="bg-primary-foreground lg:min-w-[50%] mt-2 mx-2 select-none">
         <ContextMenu>
           <ContextMenuTrigger>
             <CardHeader>
@@ -348,7 +348,7 @@ const AddNewCredits = ({
           <Input id="credits" type="number" placeholder="0" className="w-full" ref={inputRef} />
         </div>
         <DialogFooter>
-          <Button variant={"outline"} onClick={()=>handleSave(parseInt(inputRef.current?.value || '0'))} className="bg-primary-foreground">Save Changes</Button>
+          <Button variant={"outline"} onClick={()=>handleSave(Number(inputRef.current?.value || '0'))} className="bg-primary-foreground">Save Changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
