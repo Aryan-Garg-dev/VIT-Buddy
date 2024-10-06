@@ -5,8 +5,8 @@ import { Loading } from "./Pages/Loading"
 import { SEOContent } from "./constants/SEOContent"
 import { HomeLayout } from "./Layout/HomeLayout"
 import { Home } from "./Pages/Home"
+import { BaseLayout } from "./Layout/BaseLayout"
 
-const BaseLayout = lazy(()=>import("./Layout/BaseLayout").then(module=>({ default: module.BaseLayout })))
 const ComingSoon = lazy(()=>import("./Pages/ComingSoon").then(module=>({ default: module.ComingSoon })))
 const NotFound = lazy(()=>import("./Pages/NotFound").then(module=>({ default: module.NotFound })))
 const GPACalculator = lazy(()=>import("./Pages/GPACalculator").then(module=>({ default: module.GPACalculator })))
