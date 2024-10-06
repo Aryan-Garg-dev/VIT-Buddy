@@ -7,6 +7,7 @@ import { Loading } from './Pages/Loading'
 import { useTheme } from './components/theme-provider'
 import { BaseLayout } from './Layout/BaseLayout'
 import { SEOContent } from './constants/SEOContent'
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { theme } = useTheme();
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Suspense fallback={<BaseLayout meta={SEOContent.loading}><Loading /></BaseLayout>}>
         <Toaster position='bottom-center' theme={theme == "dark" ? "light" : "dark" } />
+        <Analytics />
         <Routes>{renderRoutes(routes)}</Routes>
       </Suspense>
     </Router>

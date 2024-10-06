@@ -1,10 +1,11 @@
-import { DEFAULT_DESCRIPTION, DEFAULT_KEYWORDS, DEFAULT_TITLE } from "./meta"
+import { DEFAULT_DESCRIPTION, DEFAULT_KEYWORDS, DEFAULT_TITLE, PRODUCTION_URL } from "./meta"
 
 export type MetaData = {
   title: string,
   keywords: string,
   description: string,
   imageURL: string,
+  canonicalURL?: string
 }
 
 export type PageMetaData = {
@@ -17,6 +18,7 @@ export const SEOContent: PageMetaData  = {
     description: DEFAULT_DESCRIPTION,
     keywords: DEFAULT_KEYWORDS,
     imageURL: "/images/help.webp",
+    canonicalURL: PRODUCTION_URL + "/",
   },
 
   loading: {
@@ -37,7 +39,8 @@ export const SEOContent: PageMetaData  = {
     title: "CGPA Calculator • VIT Buddy",
     imageURL: "/images/cgpa.webp",
     keywords: DEFAULT_KEYWORDS,
-    description: DEFAULT_DESCRIPTION
+    description: DEFAULT_DESCRIPTION,
+    canonicalURL: PRODUCTION_URL + "/services/cgpa"
   },
 
   gpa: {
@@ -45,19 +48,22 @@ export const SEOContent: PageMetaData  = {
     description: "Easily calculate your GPA with our user-friendly GPA calculator. Track your academic performance, manage your grades, and stay on top of your progress. Perfect for students aiming for success.",
     imageURL: "/images/gpa.webp",
     keywords: "gpa, vit, vellore, chennai, ap, bangalore, cgpa, calculator, acadmemic, progress, students, success",
+    canonicalURL: PRODUCTION_URL + "/services/gpa"
   },
 
   ffcs: {
     title: "FFCS Planner • VIT Buddy",
     imageURL: "/images/ffcs.webp",
     keywords: DEFAULT_KEYWORDS,
-    description: DEFAULT_DESCRIPTION
+    description: DEFAULT_DESCRIPTION,
+    canonicalURL: PRODUCTION_URL + "/services/ffcs-planner"
   },
 
   attendance: {
     title: "Attendance Calculator • VIT Buddy",
     imageURL: "/images/attendance.webp",  
     keywords: DEFAULT_KEYWORDS,
-    description: DEFAULT_DESCRIPTION
+    description: DEFAULT_DESCRIPTION,
+    canonicalURL: PRODUCTION_URL + "/services/attendance"
   }
 } 
