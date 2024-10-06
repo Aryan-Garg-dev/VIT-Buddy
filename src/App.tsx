@@ -8,6 +8,7 @@ import { useTheme } from './components/theme-provider'
 import { BaseLayout } from './Layout/BaseLayout'
 import { SEOContent } from './constants/SEOContent'
 import { Analytics } from '@vercel/analytics/react';
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const { theme } = useTheme();
@@ -16,6 +17,7 @@ function App() {
       <Suspense fallback={<BaseLayout meta={SEOContent.loading}><Loading /></BaseLayout>}>
         <Toaster position='bottom-center' theme={theme == "dark" ? "light" : "dark" } />
         <Analytics />
+        <ScrollToTop />
         <Routes>{renderRoutes(routes)}</Routes>
       </Suspense>
     </Router>
