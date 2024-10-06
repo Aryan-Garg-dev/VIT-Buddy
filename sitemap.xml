@@ -1,0 +1,42 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap-image/1.1 http://www.sitemaps.org/schemas/sitemap-image/1.1/sitemap-image.xsd">
+<url>
+	<loc>https://vit-buddy.vercel.app/</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://vit-buddy.vercel.app/services/cgpa</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://vit-buddy.vercel.app/services/ffcs-planner</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://vit-buddy.vercel.app/services/gpa</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://vit-buddy.vercel.app/services/attendance</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://vit-buddy.vercel.app/services/test</loc>
+	<lastmod>2024-10-06</lastmod>
+  <changefreq>daily</changefreq>
+	<priority>0.8</priority>
+</url>
+</urlset>
