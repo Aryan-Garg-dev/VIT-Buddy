@@ -16,6 +16,13 @@ export const SEOContent: PageMetaData  = {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     keywords: DEFAULT_KEYWORDS,
+    imageURL: "/images/help.webp",
+  },
+
+  loading: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    keywords: DEFAULT_KEYWORDS,
     imageURL: "/images/hack.webp",
   },
 
