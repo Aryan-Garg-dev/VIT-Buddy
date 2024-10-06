@@ -5,6 +5,7 @@ import { description } from "@/constants/text/services"
 import { cn } from "@/lib/utils"
 import { Link } from "react-router-dom"
 import AnimatedShinyText from "@/components/ui/animated-shiny-text"
+import { attendance, cgpa, ffcs, gpa } from "@/assets/images"
 
 type Service = {
   title: string,
@@ -15,10 +16,10 @@ type Service = {
 }
 
 const services: Service[] = [
-  { title: "GPA Calculator", description: description.gpa, imageURL: "/src/assets/images/gpa.png", link: "/services/gpa" },
-  { title: "CGPA Calculator", description: description.cgpa, imageURL: "/src/assets/images/cgpa.png", link: "/services/cgpa", status: "Coming Soon" },
-  { title: "FFCS Planner", description: description.ffcs, imageURL: "/src/assets/images/ffcs.png", link: "/services/ffcs-planner", status: "Coming Soon" },
-  { title: "Attendance Calculator", description: description.attendance, imageURL: "/src/assets/images/attendance.png", link: "/services/attendance", status: "Coming Soon" },
+  { title: "GPA Calculator", description: description.gpa, imageURL: gpa, link: "/services/gpa" },
+  { title: "CGPA Calculator", description: description.cgpa, imageURL: cgpa, link: "/services/cgpa", status: "Coming Soon" },
+  { title: "FFCS Planner", description: description.ffcs, imageURL: ffcs, link: "/services/ffcs-planner", status: "Coming Soon" },
+  { title: "Attendance Calculator", description: description.attendance, imageURL: attendance, link: "/services/attendance", status: "Coming Soon" },
 ]
 
 export const Services = ()=>{
