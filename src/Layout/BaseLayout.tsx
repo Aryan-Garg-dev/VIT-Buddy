@@ -4,7 +4,7 @@ import { MetaData } from "@/constants/SEOContent"
 
 interface BaseLayoutProps {
   children: React.ReactNode,
-  meta?: MetaData
+  meta: MetaData
 }
 
 export const BaseLayout = ({ children, meta }: BaseLayoutProps)=>{
