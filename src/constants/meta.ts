@@ -6,6 +6,4 @@ export const DEFAULT_KEYWORDS = "vit, ffcs, vellore, cgpa, attendance";
 
 export const DEFAULT_TITLE = "VIT Buddy"
 
-export const DEFAULT_LOGO = "/images/help.webp"
-
 export const DEFAULT_SOCIAL_IMG_URL = PRODUCTION_URL + "/images/large/help.webp"

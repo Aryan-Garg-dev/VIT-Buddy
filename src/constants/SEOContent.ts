@@ -1,11 +1,11 @@
 import { DEFAULT_DESCRIPTION, DEFAULT_KEYWORDS, DEFAULT_TITLE } from "./meta"
 
-export type MetaData = Partial<{
+export type MetaData = {
   title: string,
   keywords: string,
   description: string,
   imageURL: string,
-}>
+}
 
 export type PageMetaData = {
   [key: string]: MetaData 
@@ -29,6 +29,8 @@ export const SEOContent: PageMetaData  = {
   cgpa: {
     title: "CGPA Calculator • VIT Buddy",
     imageURL: "/images/cgpa.webp",
+    keywords: DEFAULT_KEYWORDS,
+    description: DEFAULT_DESCRIPTION
   },
 
   gpa: {
@@ -41,10 +43,14 @@ export const SEOContent: PageMetaData  = {
   ffcs: {
     title: "FFCS Planner • VIT Buddy",
     imageURL: "/images/ffcs.webp",
+    keywords: DEFAULT_KEYWORDS,
+    description: DEFAULT_DESCRIPTION
   },
 
   attendance: {
     title: "Attendance Calculator • VIT Buddy",
     imageURL: "/images/attendance.webp",  
+    keywords: DEFAULT_KEYWORDS,
+    description: DEFAULT_DESCRIPTION
   }
 } 
