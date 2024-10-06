@@ -1,0 +1,40 @@
+{
+  "name": "VIT Buddy",
+  "short_name": "VIT Buddy",
+  "description": "VIT Buddy is your go-to online platform designed specifically for VIT students to streamline their academic journey. Whether you're planning your FFCS, calculating your CGPA, or required attendance, we've got you covered.",
+  "start_url": "/index.html",
+  "display": "standalone",
+
+  "icons": [
+    {
+      "src": "images/help.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "images/logo/help_192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "images/logo/help_96.webp",
+      "sizes": "96x96",
+      "type": "image/webp"
+    },
+    {
+      "src": "images/logo/help_72.webp",
+      "sizes": "72x72",
+      "type": "image/webp"
+    },
+    {
+      "src": "images/logo/help_48.webp",
+      "sizes": "48x48",
+      "type": "image/webp"
+    },
+    {
+      "src": "images/logo/help_96.webp",
+      "sizes": "36x36",
+      "type": "image/webp"
+    }
+  ]
+}
