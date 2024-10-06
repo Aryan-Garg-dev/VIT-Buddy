@@ -4,7 +4,7 @@ import { lazy } from "react"
 import { Loading } from "./Pages/Loading"
 import { SEOContent } from "./constants/SEOContent"
 import { HomeLayout } from "./Layout/HomeLayout"
-import { Home } from "./Pages/Home"
+// import { Home } from "./Pages/Home"
 import { BaseLayout } from "./Layout/BaseLayout"
 
 const ComingSoon = lazy(()=>import("./Pages/ComingSoon").then(module=>({ default: module.ComingSoon })))
@@ -18,7 +18,7 @@ type Route = {
 }
 
 export const routes: Route[] = [
-  { path: "/", element: <HomeLayout meta={SEOContent.home}><Home /></HomeLayout> },
+  { path: "/", element: <HomeLayout meta={SEOContent.home}><Services /></HomeLayout> },
   { path: "/services", element: <BaseLayout meta={SEOContent.services}><Services /></BaseLayout> },
   { path: "/services/cgpa", element: <BaseLayout meta={SEOContent.cgpa}><ComingSoon /></BaseLayout> },
   { path: "/services/ffcs-planner", element: <BaseLayout meta={SEOContent.ffcs}><ComingSoon /></BaseLayout> },
