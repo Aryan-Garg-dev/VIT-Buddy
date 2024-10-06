@@ -23,7 +23,7 @@ export const SEOContent: PageMetaData  = {
     keywords: DEFAULT_KEYWORDS,
     imageURL: "/images/hack.webp",
 
-    socialImgURL: PRODUCTION_URL + "/images/hack.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/hack.webp",
     socialURL: PRODUCTION_URL,
     socialTitle: DEFAULT_TITLE,
     socialDescription: "Streamline your academic journey with VIT Buddy. Plan your FFCS, calculate your CGPA, and track attendance effortlessly. Perfect for VIT students!"
@@ -35,7 +35,7 @@ export const SEOContent: PageMetaData  = {
     keywords: DEFAULT_KEYWORDS,
     imageURL: "/images/hack.webp",
 
-    socialImgURL: PRODUCTION_URL + "/images/hack.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/hack.webp",
     socialTitle: "Page not found • VIT Buddy"
   },
 
@@ -43,7 +43,7 @@ export const SEOContent: PageMetaData  = {
     title: "CGPA Calculator • VIT Buddy",
     imageURL: "/images/cgpa.webp",
 
-    socialImgURL: PRODUCTION_URL + "/images/cgpa.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/cgpa.webp",
     socialURL: PRODUCTION_URL + "/services/cgpa",
     socialTitle: "CGPA Calculator • VIT Buddy",
   },
@@ -54,7 +54,7 @@ export const SEOContent: PageMetaData  = {
     imageURL: "/images/gpa.webp",
     keywords: "gpa, vit, vellore, chennai, ap, bangalore, cgpa, calculator, acadmemic, progress, students, success",
 
-    socialImgURL: PRODUCTION_URL + "/images/cgpa.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/gpa.webp",
     socialURL: PRODUCTION_URL + "/services/gpa",
     socialDescription: "Use our easy-to-use GPA calculator to calculate your GPA, manage your grades, and monitor your academic progress. Stay on track towards your goals!",
     socialTitle: "GPA Calculator • VIT Buddy"
@@ -64,7 +64,7 @@ export const SEOContent: PageMetaData  = {
     title: "FFCS Planner • VIT Buddy",
     imageURL: "/images/ffcs.webp",
 
-    socialImgURL: PRODUCTION_URL + "/images/ffcs.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/ffcs.webp",
     socialURL: PRODUCTION_URL + "/services/ffcs-planner",
     socialTitle: "FFCS Planner • VIT Buddy"
   },
@@ -73,7 +73,7 @@ export const SEOContent: PageMetaData  = {
     title: "Attendance Calculator • VIT Buddy",
     imageURL: "/images/attendance.webp",
 
-    socialImgURL: PRODUCTION_URL + "/images/attendance.webp",
+    socialImgURL: PRODUCTION_URL + "/images/large/attendance.webp",
     socialURL: PRODUCTION_URL + "/services/attendance",
     socialTitle: "Attendance Calculator • VIT Buddy"
     
