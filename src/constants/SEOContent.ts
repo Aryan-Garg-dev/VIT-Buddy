@@ -43,6 +43,14 @@ export const SEOContent: PageMetaData  = {
     canonicalURL: PRODUCTION_URL + "/services/cgpa"
   },
 
+  services: {
+    title: "Services • VIT Buddy",
+    description: "Explore our CGPA, GPA calculator, attendance and FFCS planner for seamless academic management and efficient course planning.",
+    keywords: "vit, vellore, chennai, ap, bhopal, academics, cgpa, gpa, calculator, progress, student, college, attendance, ffcs, planner",
+    imageURL: "/images/help.webp",
+    canonicalURL: PRODUCTION_URL + "/services",
+  },
+
   gpa: {
     title: "GPA Calculator • VIT Buddy",
     description: "Easily calculate your GPA with our user-friendly GPA calculator. Track your academic performance, manage your grades, and stay on top of your progress. Perfect for students aiming for success.",
