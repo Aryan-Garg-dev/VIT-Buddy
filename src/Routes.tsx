@@ -25,7 +25,7 @@ export const routes: Route[] = [
     { path: "/gpa", element: <BaseLayout meta={SEOContent.gpa}><GPACalculator /></BaseLayout> },
     { path: "/attendance", element: <BaseLayout meta={SEOContent.attendance}><ComingSoon /></BaseLayout> },
   ] },
-  { path: "/test", element: <BaseLayout><Loading /></BaseLayout> },
+  { path: "/test", element: <BaseLayout meta={SEOContent.loading}><Loading /></BaseLayout> },
   { path: "*", element: <BaseLayout meta={SEOContent.notFound}><NotFound /></BaseLayout> },
 ]
 
