@@ -30,10 +30,10 @@ export const SEO = ({
       <meta property="og:site_name" content={"VIT Buddy"} />
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={socialTitle} />
       <meta name="twitter:description" content={socialDescription} />
-      <meta name="twitter:image" content={socialURL} />
+      <meta name="twitter:image" content={socialImgURL} />
     </Helmet>
   )
 }
