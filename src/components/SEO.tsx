@@ -22,18 +22,22 @@ export const SEO = ({
       {socialURL && <link rel="canonical" href={socialURL} />}
 
       {/* Social Meta Tags */}
-      <meta property="og:title" content={socialTitle} />
-      { socialURL && <meta property="og:description" content={socialDescription} />}
-      <meta property="og:image" content={socialImgURL} />
-      <meta property="og:url" content={socialURL} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={"VIT Buddy"} />
+      {socialURL && (
+        <>
+          <meta property="og:title" content={socialTitle} />
+          <meta property="og:description" content={socialDescription} />
+          <meta property="og:image" content={socialImgURL} />
+          <meta property="og:url" content={socialURL} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="VIT Buddy" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={socialTitle} />
-      <meta name="twitter:description" content={socialDescription} />
-      <meta name="twitter:image" content={socialImgURL} />
+          {/* Twitter Meta Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={socialTitle} />
+          <meta name="twitter:description" content={socialDescription} />
+          <meta name="twitter:image" content={socialImgURL} />
+        </>
+      )}
     </Helmet>
   )
 }
