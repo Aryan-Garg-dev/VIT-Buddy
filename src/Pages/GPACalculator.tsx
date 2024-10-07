@@ -115,6 +115,7 @@ export const GPACalculator = ()=>{
 
   const handleDelete = (index: number)=>{
     const updatedList = gradeCreditList.filter((_, idx) => idx !== index);
+    if (updatedList.length == 0) updatedList.push({ Grade: "", Credits: 0 })
     const updatedColorsList = colorsList.filter((_, idx) => idx !== index) 
     setGradeCreditList(updatedList);
     setColorsList(updatedColorsList);
