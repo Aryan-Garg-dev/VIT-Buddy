@@ -19,7 +19,7 @@ type Route = {
 
 export const routes: Route[] = [
   { path: "/", element: <HomeLayout meta={SEOContent.home}><Services /></HomeLayout> },
-  { path: "/services", element: <BaseLayout meta={SEOContent.services}><Services /></BaseLayout> },
+  { path: "/services", element: <HomeLayout meta={SEOContent.services}><Services /></HomeLayout> },
   { path: "/services/cgpa", element: <BaseLayout meta={SEOContent.cgpa}><ComingSoon /></BaseLayout> },
   { path: "/services/ffcs-planner", element: <BaseLayout meta={SEOContent.ffcs}><ComingSoon /></BaseLayout> },
   { path: "/services/gpa", element: <BaseLayout meta={SEOContent.gpa}><GPACalculator /></BaseLayout> },

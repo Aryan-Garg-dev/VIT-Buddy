@@ -9,7 +9,7 @@ interface BaseLayoutProps {
 
 export const HomeLayout = ({ children, meta }: BaseLayoutProps)=>{
   return (
-    <div className="h-full">
+    <div className="h-full min-h-screen">
       <SEO {...meta} />
       <Navbar transparent />
       <main className="h-full pt-16">
