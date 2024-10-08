@@ -107,6 +107,19 @@ body,
   src: url("./assets/fonts/sho-card-caps/Sho-CardCapsNF.ttf");
 }
 
+@font-face {
+  font-family: "josephin";
+  src: url("./assets/fonts/josefin-sans/JosefinSans-Regular.ttf");
+}
+@font-face {
+  font-family: "josephin-italic";
+  src: url("./assets/fonts/josefin-sans/JosefinSans-Italic.ttf");
+}
+@font-face {
+  font-family: "josephin-bold";
+  src: url("./assets/fonts/josefin-sans/JosefinSans-Bold.ttf");
+}
+
 .light::-webkit-scrollbar {
   width: 10px;
 }

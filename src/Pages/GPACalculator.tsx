@@ -155,12 +155,12 @@ export const GPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] mt-2 mx-2 select-none">
+      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
         <ContextMenu>
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
-              <CardTitle className="font-default text-2xl md:text-3xl text-center tracking-wide">GPA Calculator</CardTitle>
-              <CardDescription className="font-default text-xl md:text-2xl text-center tracking-wide">Enter your grades and credits for each subject completed this semester!</  CardDescription>
+              <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">GPA Calculator</CardTitle>
+              <CardDescription className="font-classic text-3xl md:text-4xl text-center">Enter your grades and credits for each subject completed this semester!</  CardDescription>
             </CardHeader>
             {/* Scrollable */}
             <CardContent className="space-y-2">
@@ -181,7 +181,7 @@ export const GPACalculator = ()=>{
             <CardFooter className="grid grid-cols-3 md:mx-8 max-md:grid-cols-2 gap-4 justify-center">
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full" 
+                className="max-sm:w-full font-semibold text-muted-foreground" 
                 onClick={()=>addNew("", 0)}
                 onContextMenu={disableContextMenu}
               >
@@ -189,7 +189,7 @@ export const GPACalculator = ()=>{
               </Button>
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full" 
+                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
                 onClick={handleCalculateGPA}
                 onContextMenu={disableContextMenu}
               >
@@ -197,7 +197,7 @@ export const GPACalculator = ()=>{
               </Button>
               {isMobile && <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full" 
+                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
                 onClick={()=>setIsDialogOpen(true)}
                 onContextMenu={disableContextMenu}
               >
@@ -205,7 +205,7 @@ export const GPACalculator = ()=>{
               </Button>}
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full" 
+                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
                 onClick={handleReset}
                 onContextMenu={disableContextMenu}
               >
@@ -292,8 +292,7 @@ const SelectGrade = ({
     <Select onValueChange={onChange} value={value && value}>
       <SelectTrigger 
         onContextMenu={disableContextMenu}
-        
-        className="font-poppins font-medium bg-background" 
+        className="font-poppins font-medium bg-background"
       ><SelectValue placeholder="Grade" /></SelectTrigger>
       <SelectContent>
         <SelectGroup>
@@ -345,17 +344,17 @@ const AddNewCredits = ({
   const inputRef = useRef<HTMLInputElement>(null);
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent>
+      <DialogContent className="bg-primary-foreground">
         <DialogHeader>
-          <DialogTitle className="font-poppins">Add another credit option...</DialogTitle>
-          <DialogDescription className="font-poppins">If your are not able to find appropriate credits for your subject, you can add one here.</DialogDescription>
+          <DialogTitle className="font-poppins text-xl">Add another credit option...</DialogTitle>
+          <DialogDescription className="font-poppins md:text-base">If your are not able to find appropriate credits for your subject, you can add one here.</DialogDescription>
         </DialogHeader>
         <div className="flex gap-2 items-center">
-          <Label htmlFor="credits" className="mr-5 text-nowrap text-2xl font-default font-medium">{"Credits :"}</Label>
+          <Label htmlFor="credits" className="mr-5 text-nowrap text-2xl font-cursive font-medium">{"Credits :"}</Label>
           <Input id="credits" type="number" placeholder="0" className="w-full" ref={inputRef} />
         </div>
         <DialogFooter>
-          <Button variant={"outline"} onClick={()=>handleSave(Number(inputRef.current?.value || '0'))} className="bg-primary-foreground">Save Changes</Button>
+          <Button variant={"outline"} onClick={()=>handleSave(Number(inputRef.current?.value || '0'))} className="text-muted-foreground bg-primary-foreground font-poppins ">Save Changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -375,10 +374,10 @@ const GPALookup = ({
     <Drawer open={open} onOpenChange={setIsOpen}>
       <DrawerContent className="mb-5 bg-primary-foreground">
         <DrawerHeader className="mt-4">
-          <DrawerTitle className="font-default text-4xl tracking-wide text-center">Your GPA</DrawerTitle>
-          <DrawerDescription className="font-default text-2xl tracking-wide text-center">This is calculated based on the inputs you provided.</DrawerDescription>
+          <DrawerTitle className="font-cursive text-4xl md:text-5xl tracking-wide text-center">Your GPA</DrawerTitle>
+          <DrawerDescription className="font-classic tracking-wide text-3xl md:text-4xl md:tracking-wider text-center">This is calculated based on the inputs you provided.</DrawerDescription>
         </DrawerHeader>
-        <GradualSpacing className="text-center text-7xl  tracking-tighter font-bold font-poppins" text={`${gpa}`}></GradualSpacing>
+        <GradualSpacing className="text-center text-7xl md:text-8xl  tracking-tighter font-bold font-poppins" text={`${gpa}`}></GradualSpacing>
       </DrawerContent>
     </Drawer>
   )

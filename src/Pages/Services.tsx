@@ -23,7 +23,7 @@ export const Services = ()=>{
                     { service.status && <div className={cn("border rounded-full text-sm w-fit px-4 flex items-center", isMobile && "hidden")}><AnimatedShinyText>{service.status}</AnimatedShinyText></div>}
                   </div>
                   <CardDescription className="flex flex-col">
-                    <div className={cn("font-default md:text-2xl text-xl tracking-wider text-pretty", isMobile && "text-balance")}>{service.description}</div>
+                    <div className={cn("font-default font-[570] text-2xl max-sm:text-xl text-pretty", isMobile && "text-balance")}>{service.description}</div>
                   </CardDescription>
                 </CardHeader>
               </CardContent>

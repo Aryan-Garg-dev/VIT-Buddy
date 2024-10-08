@@ -76,8 +76,11 @@ export default {
   			fancy: ["foolish", "poppins", "system-ui"],
   			title: ["seaside", "poppins", "system-ui"],
   			regular: ["sunflowers", "poppins", "system-ui"],
-  			default: ["yours", "poppins", "system-ui"],
-  			display: ["display", "poppins", "system-ui"]
+  			cursive: ["yours", "poppins", "system-ui"],
+  			display: ["display", "poppins", "system-ui"],
+        default: ["josephin", "poppins", "system-ui"],
+        bold: ["josephin-bold", "poppins", "system-ui"],
+        italic: ["josephin-italic", "poppins", "system-ui"],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

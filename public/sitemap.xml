@@ -3,37 +3,37 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap-image/1.1 http://www.sitemaps.org/schemas/sitemap-image/1.1/sitemap-image.xsd">
     <url>
-        <loc>https://vitbuddy.tech/</loc>
+        <loc>https://www.vitbuddy.tech/</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://vitbuddy.tech/services/cgpa</loc>
+        <loc>https://www.vitbuddy.tech/services/cgpa</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://vitbuddy.tech/services/ffcs-planner</loc>
+        <loc>https://www.vitbuddy.tech/services/ffcs-planner</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://vitbuddy.tech/services/gpa</loc>
+        <loc>https://www.vitbuddy.tech/services/gpa</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://vitbuddy.tech/services/attendance</loc>
+        <loc>https://www.vitbuddy.tech/services/attendance</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://vitbuddy.tech/services/test</loc>
+        <loc>https://www.vitbuddy.tech/services/test</loc>
         <lastmod>2024-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>

@@ -14,7 +14,7 @@ export const ComingSoon = ()=>{
       mainCircleSize={!isMobile ? 280 : 210 }
       numCircles={!isMobile ? 10 : 8}
     >
-      <div className="font-default text-2xl md:text-3xl lg:text-4xl">{"Coming Soon... "}</div>
+      <div className="font-cursive text-2xl md:text-3xl lg:text-4xl">{"Coming Soon... "}</div>
     </Ripple>
     </div>
   )
