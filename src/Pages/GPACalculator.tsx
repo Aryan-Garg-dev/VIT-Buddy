@@ -248,9 +248,10 @@ const GradeCreditInput = ({
   return (
     <div className="w-full flex items-center gap-2">
       <div className="max-sm:hidden"><ColorMarker value={color} onChange={onColorChange} /></div>
+      {/* <Button variant={"outline"} className="bg-primary-foreground max-sm:px-2 sm:hidden"><Type className="text-muted-foreground size-4" /></Button> */}
       <SelectGrade onChange={onGradeChange} value={grade} />
       <SelectCredits onChange={onCreditChange} value={credits} values={creditsList} />
-      <Button variant={"outline"} className="bg-primary-foreground" onClick={onDelete} onContextMenu={disableContextMenu}>
+      <Button variant={"outline"} className="bg-primary-foreground max-sm:px-2" onClick={onDelete} onContextMenu={disableContextMenu}>
         <Trash2 className="size-4 text-muted-foreground" />
       </Button>
     </div>
