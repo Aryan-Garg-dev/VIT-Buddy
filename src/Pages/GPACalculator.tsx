@@ -74,6 +74,11 @@ import GradualSpacing from "@/components/ui/gradual-spacing"
 const baseList: GradeCreditList = Array(5).fill(null).map(()=>({ Grade: "", Credits: 0 }));
 const baseColorsList: string[] = Array(baseList.length).fill(""); 
 
+const disableContextMenu = (e: React.MouseEvent | React.TouchEvent)=>{
+  e.preventDefault();
+  e.stopPropagation();
+}
+
 export const GPACalculator = ()=>{
   const [gradeCreditList, setGradeCreditList] = useState<GradeCreditList>(baseList);
   const [creditsList, setCreditsList] = useState<number[]>(credits);
@@ -81,10 +86,6 @@ export const GPACalculator = ()=>{
   const [colorsList, setColorsList] = useState<string[]>(baseColorsList);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [GPA, setGPA] = useState(0);
-
-  const handleContextMenu = (e: React.MouseEvent) => {
-    e.stopPropagation(); 
-  };
 
   const updateGrade = (index: number, grade: string)=>{
     const updatedList: GradeCreditList = gradeCreditList.map((item, idx)=>
@@ -180,24 +181,24 @@ export const GPACalculator = ()=>{
               <Button 
                 variant={"secondary"} 
                 className="max-sm:w-full min-w-24" 
-                onContextMenu={handleContextMenu}
                 onClick={()=>addNew("", 0)}
+                onContextMenu={disableContextMenu}
               >
                 Add More
               </Button>
               <Button 
                 variant={"secondary"} 
                 className="max-sm:w-full min-w-24" 
-                onContextMenu={handleContextMenu}
                 onClick={handleCalculateGPA}
+                onContextMenu={disableContextMenu}
               >
                 Calculate
               </Button>
               <Button 
                 variant={"secondary"} 
                 className="max-sm:w-full min-w-24" 
-                onContextMenu={handleContextMenu} 
                 onClick={handleReset}
+                onContextMenu={disableContextMenu}
               >
                 Reset
               </Button>
@@ -239,7 +240,7 @@ const GradeCreditInput = ({
       <div className="max-sm:hidden"><ColorMarker value={color} onChange={onColorChange} /></div>
       <SelectGrade onChange={onGradeChange} value={grade} />
       <SelectCredits onChange={onCreditChange} value={credits} values={creditsList} />
-      <Button variant={"outline"} className="bg-primary-foreground" onClick={onDelete}>
+      <Button variant={"outline"} className="bg-primary-foreground" onClick={onDelete} onContextMenu={disableContextMenu}>
         <Trash2 className="size-4 text-muted-foreground" />
       </Button>
     </div>
@@ -256,7 +257,7 @@ const ColorMarker = ({
 
   return (
     <HoverCard>
-      <HoverCardTrigger><div 
+      <HoverCardTrigger onContextMenu={disableContextMenu}><div 
         style={{backgroundColor: value ? value : theme == "dark" ? "#121212" : "#F5F5F7"}} 
         className="h-8 w-8 rounded-full" 
       /></HoverCardTrigger>
@@ -278,14 +279,11 @@ const SelectGrade = ({
   value: string
   onChange: (value: string)=>void
 })=>{
-  const handleContextMenu = (e: React.MouseEvent) => {
-    e.stopPropagation(); 
-  };
   return (
     <Select onValueChange={onChange} value={value && value}>
       <SelectTrigger 
+        onContextMenu={disableContextMenu}
         className="font-poppins font-medium bg-background" 
-        onContextMenu={handleContextMenu}
       ><SelectValue placeholder="Grade" /></SelectTrigger>
       <SelectContent>
         <SelectGroup>
@@ -307,14 +305,11 @@ const SelectCredits = ({
   onChange: (value: string)=>void
   values: number[]
 })=>{
-  const handleContextMenu = (e: React.MouseEvent) => {
-    e.stopPropagation(); 
-  };
   return (
     <Select onValueChange={onChange} value={value && value}>
       <SelectTrigger 
+        onContextMenu={disableContextMenu}
         className="font-poppins font-medium bg-background"
-        onContextMenu={handleContextMenu}
       >
         <SelectValue placeholder="Credits" /></SelectTrigger>
       <SelectContent>
