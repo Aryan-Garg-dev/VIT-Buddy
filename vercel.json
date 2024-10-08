@@ -1,19 +1,6 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "vitbuddy.tech"
-        }
-      ],
-      "destination": "https://www.vitbuddy.tech",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/(.*)", "destination": "/$1" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
