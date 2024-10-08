@@ -1,4 +1,4 @@
-export const PRODUCTION_URL = "https://www.vitbuddy.tech"
+export const PRODUCTION_URL = "https://vitbuddy.tech"
 
 export const DEFAULT_DESCRIPTION = "VIT Buddy is your go-to online platform designed specifically for VIT students to streamline their academic journey. Whether you're planning your FFCS, calculating your CGPA, or required attendance, we've got you covered.";
 
