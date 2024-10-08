@@ -69,7 +69,7 @@ import { toast } from "sonner"
 import { useTheme } from "@/components/theme-provider"
 import { calculateGPA } from './../lib/services/gpaCalculator';
 import GradualSpacing from "@/components/ui/gradual-spacing"
-
+import { useIsMobile } from "@/hooks/useIsMobile"
 
 const baseList: GradeCreditList = Array(5).fill(null).map(()=>({ Grade: "", Credits: 0 }));
 const baseColorsList: string[] = Array(baseList.length).fill(""); 
@@ -86,7 +86,8 @@ export const GPACalculator = ()=>{
   const [colorsList, setColorsList] = useState<string[]>(baseColorsList);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [GPA, setGPA] = useState(0);
-
+  const isMobile = useIsMobile();
+  
   const updateGrade = (index: number, grade: string)=>{
     const updatedList: GradeCreditList = gradeCreditList.map((item, idx)=>
       idx == index ? { ...item, Grade: grade } : item
@@ -156,7 +157,7 @@ export const GPACalculator = ()=>{
     <div className="min-h-full flex flex-col items-center">
       <Card className="bg-primary-foreground lg:min-w-[50%] mt-2 mx-2 select-none">
         <ContextMenu>
-          <ContextMenuTrigger>
+          <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
               <CardTitle className="font-default text-2xl md:text-3xl text-center tracking-wide">GPA Calculator</CardTitle>
               <CardDescription className="font-default text-xl md:text-2xl text-center tracking-wide">Enter your grades and credits for each subject completed this semester!</  CardDescription>
@@ -177,10 +178,10 @@ export const GPACalculator = ()=>{
                 />
               ))}
             </CardContent>
-            <CardFooter className="flex max-sm:flex-col gap-4 justify-center">
+            <CardFooter className="grid grid-cols-3 sm:mx-8 max-sm:grid-cols-2 gap-4 justify-center">
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full min-w-24" 
+                className="max-sm:w-full" 
                 onClick={()=>addNew("", 0)}
                 onContextMenu={disableContextMenu}
               >
@@ -188,15 +189,23 @@ export const GPACalculator = ()=>{
               </Button>
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full min-w-24" 
+                className="max-sm:w-full" 
                 onClick={handleCalculateGPA}
                 onContextMenu={disableContextMenu}
               >
-                Calculate
+                Calculate GPA
               </Button>
+              {isMobile && <Button 
+                variant={"secondary"} 
+                className="max-sm:w-full" 
+                onClick={()=>setIsDialogOpen(true)}
+                onContextMenu={disableContextMenu}
+              >
+                Add Credit Option
+              </Button>}
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full min-w-24" 
+                className="max-sm:w-full" 
                 onClick={handleReset}
                 onContextMenu={disableContextMenu}
               >
@@ -206,7 +215,7 @@ export const GPACalculator = ()=>{
           </ContextMenuTrigger>
           <ContextMenuContent>
             <ContextMenuItem className="font-poppins" onClick={()=>addNew("", 0)}>Add More</ContextMenuItem>
-            <ContextMenuItem className="font-poppins pr-5" onClick={()=>setIsDialogOpen(true)}>Add new credits</ContextMenuItem>
+            <ContextMenuItem className="font-poppins pr-5" onClick={()=>setIsDialogOpen(true)}>Add Credit Option</ContextMenuItem>
             <ContextMenuItem className="font-poppins" onClick={handleCalculateGPA}>Calculate GPA</ContextMenuItem>
             <ContextMenuItem className="font-poppins" onClick={handleReset}>Reset</ContextMenuItem>
           </ContextMenuContent>
@@ -283,6 +292,7 @@ const SelectGrade = ({
     <Select onValueChange={onChange} value={value && value}>
       <SelectTrigger 
         onContextMenu={disableContextMenu}
+        
         className="font-poppins font-medium bg-background" 
       ><SelectValue placeholder="Grade" /></SelectTrigger>
       <SelectContent>
@@ -309,6 +319,7 @@ const SelectCredits = ({
     <Select onValueChange={onChange} value={value && value}>
       <SelectTrigger 
         onContextMenu={disableContextMenu}
+        
         className="font-poppins font-medium bg-background"
       >
         <SelectValue placeholder="Credits" /></SelectTrigger>
