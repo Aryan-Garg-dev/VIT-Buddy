@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /private/
 Allow: /
-Sitemap: https://www.vitbuddy.tech/sitemap.xml
+Sitemap: https://vitbuddy.tech/sitemap.xml

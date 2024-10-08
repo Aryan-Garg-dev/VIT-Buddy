@@ -160,7 +160,7 @@ export const GPACalculator = ()=>{
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
               <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">GPA Calculator</CardTitle>
-              <CardDescription className="font-classic text-3xl md:text-4xl text-center">Enter your grades and credits for each subject completed this semester!</  CardDescription>
+              <CardDescription className="font-bold text-xl md:text-2xl text-center">Enter your grades and credits for each subject completed this semester!</  CardDescription>
             </CardHeader>
             {/* Scrollable */}
             <CardContent className="space-y-2">
@@ -375,7 +375,7 @@ const GPALookup = ({
       <DrawerContent className="mb-5 bg-primary-foreground">
         <DrawerHeader className="mt-4">
           <DrawerTitle className="font-cursive text-4xl md:text-5xl tracking-wide text-center">Your GPA</DrawerTitle>
-          <DrawerDescription className="font-classic tracking-wide text-3xl md:text-4xl md:tracking-wider text-center">This is calculated based on the inputs you provided.</DrawerDescription>
+          <DrawerDescription className="font-bold tracking-wide text-xl md:text-2xl text-center">This is calculated based on the inputs you provided.</DrawerDescription>
         </DrawerHeader>
         <GradualSpacing className="text-center text-7xl md:text-8xl  tracking-tighter font-bold font-poppins" text={`${gpa}`}></GradualSpacing>
       </DrawerContent>
