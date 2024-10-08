@@ -178,7 +178,7 @@ export const GPACalculator = ()=>{
                 />
               ))}
             </CardContent>
-            <CardFooter className="grid grid-cols-3 sm:mx-8 max-sm:grid-cols-2 gap-4 justify-center">
+            <CardFooter className="grid grid-cols-3 md:mx-8 max-md:grid-cols-2 gap-4 justify-center">
               <Button 
                 variant={"secondary"} 
                 className="max-sm:w-full" 
