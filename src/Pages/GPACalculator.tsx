@@ -179,10 +179,10 @@ export const GPACalculator = ()=>{
                 />
               ))}
             </CardContent>
-            <CardFooter className="grid grid-cols-3 md:mx-8 max-md:grid-cols-2 gap-4 justify-center">
+            <CardFooter className="grid grid-cols-3 content-between md:mx-8 max-md:grid-cols-2 gap-4">
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full font-semibold text-muted-foreground" 
+                className="font-semibold text-muted-foreground max-sm:order-1" 
                 onClick={()=>addNew("", 0)}
                 onContextMenu={disableContextMenu}
               >
@@ -190,7 +190,7 @@ export const GPACalculator = ()=>{
               </Button>
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
+                className="font-poppins font-semibold text-muted-foreground max-sm:order-3 max-sm:col-span-2" 
                 onClick={handleCalculateGPA}
                 onContextMenu={disableContextMenu}
               >
@@ -198,7 +198,7 @@ export const GPACalculator = ()=>{
               </Button>
               {isMobile && <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
+                className="font-poppins font-semibold text-muted-foreground max-sm:order-4 max-sm:col-span-2" 
                 onClick={()=>setIsDialogOpen(true)}
                 onContextMenu={disableContextMenu}
               >
@@ -206,7 +206,7 @@ export const GPACalculator = ()=>{
               </Button>}
               <Button 
                 variant={"secondary"} 
-                className="max-sm:w-full font-poppins font-semibold text-muted-foreground" 
+                className="font-poppins font-semibold text-muted-foreground max-sm:order-2" 
                 onClick={handleReset}
                 onContextMenu={disableContextMenu}
               >
