@@ -1,8 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/(.*)", 
-      "destination": "https://vitbuddy.tech/$1",
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "vitbuddy.tech"
+        }
+      ],
+      "destination": "https://www.vitbuddy.tech",
       "permanent": true
     }
   ],
