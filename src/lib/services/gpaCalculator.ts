@@ -39,3 +39,14 @@ export const calculateGPA = (data: GradeCreditList): number => {
   const gpa = creditScore > 0 ? gradePoints/creditScore : 0;
   return Math.round(gpa * 100) / 100;
 }
+
+type TotalCoursesCredits = { Courses: number, Credits: number };
+export const calculateTotalCoursesCredits = (list: GradeCreditList): TotalCoursesCredits => {
+  let totalCourses = 0;
+  let totalCredits = 0;
+  for (const item of list){
+    if (item.Grade !== "") totalCourses += 1;
+    if (item.Credits !== 0) totalCredits += item.Credits
+  }
+  return { Courses: totalCourses, Credits: totalCredits };
+}

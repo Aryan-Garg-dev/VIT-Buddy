@@ -1,4 +1,4 @@
-import { credits, GradeCreditList, grades, validateList } from "@/lib/services/gpaCalculator"
+import { calculateTotalCoursesCredits, credits, GradeCreditList, grades, validateList } from "@/lib/services/gpaCalculator"
 import { useRef, useState } from "react"
 import "../App.css"
 
@@ -164,6 +164,7 @@ export const GPACalculator = ()=>{
             </CardHeader>
             {/* Scrollable */}
             <CardContent className="space-y-2">
+              <TotalCoursesCredits gradeCreditList={gradeCreditList} />
               {gradeCreditList.map((item, index)=>(
                 <GradeCreditInput 
                   key={index} 
@@ -331,6 +332,20 @@ const SelectCredits = ({
         </SelectGroup>
       </SelectContent>
     </Select>
+  )
+}
+
+const TotalCoursesCredits = ({
+  gradeCreditList
+}: {
+  gradeCreditList: GradeCreditList
+})=>{
+  const { Courses, Credits } = calculateTotalCoursesCredits(gradeCreditList);
+  return (
+    <div className="py-1.5 border rounded-lg shadow-sm w-full flex justify-around">
+      <div className="font-poppins text-muted-foreground"><span className="font-semibold">Courses:</span> {Courses}</div>
+      <div className="font-poppins text-muted-foreground"><span className="font-semibold">Credits:</span> {Credits}</div>
+    </div>
   )
 }
 
