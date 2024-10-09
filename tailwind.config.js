@@ -18,7 +18,8 @@ export default {
   			gradient: 'gradient 8s linear infinite',
   			'shiny-text': 'shiny-text 8s infinite',
   			grid: 'grid 15s linear infinite',
-  			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'
+  			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
+        meteor: "meteor 5s linear infinite",
   		},
   		keyframes: {
   			'shimmer-slide': {
@@ -68,7 +69,15 @@ export default {
   				'50%': {
   					transform: 'translate(-50%, -50%) scale(0.9)'
   				}
-  			}
+  			},
+        meteor: {
+          "0%": { transform: "rotate(90deg) translateX(600px)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(90deg) translateX(0)",
+            opacity: 0,
+          },
+        },
   		},
   		fontFamily: {
   			poppins: ["poppins", "system-ui"],
