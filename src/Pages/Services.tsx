@@ -15,7 +15,7 @@ export const Services = ()=>{
   return (
     <div className="min-h-full w-full flex flex-col items-center">
       <div className="hidden lg:dark:block"><Meteors number={30} /></div>
-      <div className="max-w-4xl space-y-6 px-5 pt-2 pb-5 mx-5">
+      <div className="max-w-4xl space-y-6 px-5 pt-2 pb-5 md:mx-5">
         {services.map((service, index)=>(
           <Card className="h-full w-full select-none pt-4 bg-primary-foreground transform transition duration-150 hover:scale-105 active:scale-95 active:shadow-sm hover:shadow-2xl dark:shadow-neutral-900 group" key={index}
           onMouseEnter={cardScroll}
