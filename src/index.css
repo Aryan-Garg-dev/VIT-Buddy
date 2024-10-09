@@ -160,3 +160,12 @@ body,
   scrollbar-width: none;
 }
 
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+  perspective: 500px;
+}
+
+.rotate-on-hover:hover {
+  transform: rotateY(45deg); 
+}
+
