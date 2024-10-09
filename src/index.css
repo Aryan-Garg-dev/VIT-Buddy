@@ -141,11 +141,11 @@ body,
 }
 
 .dark::-webkit-scrollbar-track {
-  background: #1f1f1f;
+  background: #171717;
 }
 
 .dark::-webkit-scrollbar-thumb {
-  background: #171717;
+  background: #1e1e1e;
 }
 
 .dark::-webkit-scrollbar-thumb:hover {
