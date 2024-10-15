@@ -14,10 +14,10 @@ export const Services = ()=>{
   const isMobile = useIsMobile();
   return (
     <div className="min-h-full w-full flex flex-col items-center">
-      <div className="hidden lg:dark:block"><Meteors number={30} /></div>
+      {/* <div className="hidden lg:dark:block"><Meteors number={30} /></div> */}
       <div className="max-w-4xl space-y-6 md:px-5 px-4 pt-2 pb-5 md:mx-5">
         {services.map((service, index)=>(
-          <Card className="h-full w-full select-none pt-4 bg-primary-foreground transform transition duration-150 md:hover:scale-105 active:scale-95 active:shadow-sm md:hover:shadow-2xl dark:shadow-neutral-900 group" key={index}
+          <Card className="h-full w-full select-none pt-4 bg-primary-foreground transform transition duration-150 md:hover:scale-105 active:scale-95 active:shadow-sm md:hover:dark:shadow-2xl md:hover:shadow-xl dark:shadow-neutral-900 md:bg-gradient-to-b dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900 from-gray-50 to-gray-200 group" key={index}
           onMouseEnter={cardScroll}
           >
             <Link to={service.link}>
@@ -26,7 +26,7 @@ export const Services = ()=>{
                 <CardHeader>
                   <div className={cn("flex justify-between")}>
                     <CardTitle className={cn("md:text-4xl sm:text-3xl text-2xl font-poppins group-hover:animate-gradient")}>{service.title}</CardTitle>
-                    { service.status && <div className={cn("border rounded-full text-sm w-fit px-4 flex items-center", isMobile && "hidden")}><AnimatedShinyText>{service.status}</AnimatedShinyText></div>}
+                    { service.status && <div className={cn("bg-background border rounded-full text-sm w-fit px-4 flex items-center", isMobile && "hidden")}><AnimatedShinyText>{service.status}</AnimatedShinyText></div>}
                   </div>
                   <CardDescription className="flex flex-col">
                     <div className={cn("font-bold text-2xl max-sm:text-xl text-pretty", isMobile && "text-balance")}>{service.description}</div>
