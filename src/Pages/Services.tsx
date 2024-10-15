@@ -6,7 +6,6 @@ import AnimatedShinyText from "@/components/ui/animated-shiny-text"
 import { useIsMobile } from "@/hooks/useIsMobile"
 import { services } from "@/constants/text/services"
 import { scrollIntoView } from "@/lib/scroll"
-import Meteors from "@/components/ui/meteors"
 
 const cardScroll = (e: React.MouseEvent) => scrollIntoView(e, 50);
 
