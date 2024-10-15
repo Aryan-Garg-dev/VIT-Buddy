@@ -90,6 +90,7 @@ export default {
         default: ["josephin", "poppins", "system-ui"],
         bold: ["josephin-bold", "poppins", "system-ui"],
         italic: ["josephin-italic", "poppins", "system-ui"],
+        kghappy: ['Kg-Happy', 'system-ui'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
