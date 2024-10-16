@@ -55,7 +55,7 @@ export const SEOContent: PageMetaData  = {
     title: "GPA Calculator • VIT Buddy",
     description: description.gpa,
     imageURL: "/images/gpa.webp",
-    keywords: "gpa, vit, vellore, chennai, ap, bangalore, cgpa, calculator, acadmemic, progress, students, success",
+    keywords: "gpa, gpa calculator vit, vit gpa calculator, gpa calculator, vit, grade vit, VIT, calculation, semester, vellore, vellore institute of technology, FAT, exams, class, project, lab, vitian, theory, j component",
     canonicalURL: PRODUCTION_URL + links.gpa
   },
 
