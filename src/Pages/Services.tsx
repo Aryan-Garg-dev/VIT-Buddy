@@ -16,7 +16,7 @@ export const Services = ()=>{
       {/* <div className="hidden lg:dark:block"><Meteors number={30} /></div> */}
       <div className="max-w-4xl space-y-6 md:px-5 px-4 pt-2 pb-5 md:mx-5">
         {services.map((service, index)=>(
-          <Card className="h-full w-full select-none pt-4 bg-primary-foreground transform transition duration-150 md:hover:scale-105 active:scale-95 active:shadow-sm md:hover:dark:shadow-2xl md:hover:shadow-xl dark:shadow-neutral-900 md:bg-gradient-to-br dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900 from-gray-50 to-gray-200 group" key={index}
+          <Card className="h-full w-full select-none pt-4 bg-primary-foreground transform transition duration-150 md:hover:scale-105 active:scale-95 active:shadow-sm md:hover:dark:shadow-2xl md:hover:shadow-xl dark:shadow-neutral-900 bg-gradient-to-tr md:bg-gradient-to-br dark:from-neutral-800 md:dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900 from-gray-200 to-neutral-50 group shadow-lg" key={index}
           onMouseEnter={cardScroll}
           >
             <Link to={service.link}>
