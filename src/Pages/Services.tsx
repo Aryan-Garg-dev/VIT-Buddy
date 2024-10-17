@@ -28,7 +28,7 @@ export const Services = ()=>{
                     { service.status && <div className={cn("bg-background border rounded-full text-sm w-fit max-h-10 px-4 flex items-center text-nowrap", isMobile && "hidden")}><AnimatedShinyText>{service.status}</AnimatedShinyText></div>}
                   </div>
                   <CardDescription className="flex flex-col">
-                    <div className={cn("font-bold text-2xl max-sm:text-xl text-pretty", isMobile && "text-balance")}>{service.description}</div>
+                    <div className={cn("font-josephinBold text-2xl max-sm:text-xl text-pretty", isMobile && "text-balance")}>{service.description}</div>
                   </CardDescription>
                 </CardHeader>
               </CardContent>

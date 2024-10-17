@@ -88,7 +88,7 @@ export default {
   			cursive: ["yours", "poppins", "system-ui"],
   			display: ["display", "poppins", "system-ui"],
         default: ["josephin", "poppins", "system-ui"],
-        bold: ["josephin-bold", "poppins", "system-ui"],
+        josephinBold: ["josephin-bold", "poppins", "system-ui"],
         italic: ["josephin-italic", "poppins", "system-ui"],
         kghappy: ['Kg-Happy', 'system-ui'],
   		},
