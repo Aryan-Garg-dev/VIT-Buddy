@@ -168,7 +168,7 @@ const CGPALookup = ({
     <Drawer open={open} onOpenChange={setIsOpen}>
       <DrawerContent className="mb-5 bg-primary-foreground">
         <DrawerHeader className="mt-4">
-          <DrawerTitle className="font-cursive text-4xl md:text-5xl tracking-wide text-center">Your GPA</DrawerTitle>
+          <DrawerTitle className="font-cursive text-4xl md:text-5xl tracking-wide text-center">Your CGPA</DrawerTitle>
           <DrawerDescription className="font-josephinBold tracking-wide text-xl md:text-2xl text-center">This is calculated based on the inputs you provided.</DrawerDescription>
         </DrawerHeader>
         <GradualSpacing className="text-center text-7xl md:text-8xl  tracking-tighter font-bold font-poppins" text={`${cgpa}`}></GradualSpacing>
