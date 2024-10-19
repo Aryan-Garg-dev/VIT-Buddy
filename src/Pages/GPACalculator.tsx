@@ -155,7 +155,7 @@ export const GPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none shadow-xl">
+      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
         <ContextMenu>
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>

@@ -58,7 +58,7 @@ export const CGPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none shadow-xl">
+      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
         <CardHeader>
           <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">CGPA Calculator</CardTitle>
           <CardDescription className="font-josephinBold text-xl md:text-2xl text-center">
