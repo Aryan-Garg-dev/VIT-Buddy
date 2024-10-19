@@ -8,7 +8,7 @@ import { Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const baseList: GPACredit[] = Array(5).fill(null).map(()=>({ GPA: 0, Credits: 0 }));
+const baseList: GPACredit[] = Array(6).fill(null).map(()=>({ GPA: 0, Credits: 0 }));
 
 export const CGPACalculator = ()=>{
   const [GPACreditsList, setGPACreditsList] = useState<GPACredit[]>(baseList);
