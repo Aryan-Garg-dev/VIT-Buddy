@@ -38,7 +38,7 @@ export const SEOContent: PageMetaData  = {
   cgpa: {
     title: "CGPA Calculator • VIT Buddy",
     imageURL: "/images/cgpa.webp",
-    keywords: DEFAULT_KEYWORDS,
+    keywords: "cgpa calculator, cgpa, vit cgpa calculator, cgpa calculator vit, instant cgpa, VIT, calculation, semester, vellore, vellore institute of technology, FAT, exams, class, project, lab, vitian, theory, j component",
     description: description.cgpa,
     canonicalURL: PRODUCTION_URL + links.cgpa
   },

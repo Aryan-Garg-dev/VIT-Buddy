@@ -155,7 +155,7 @@ export const GPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
+      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none shadow-xl">
         <ContextMenu>
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
@@ -227,7 +227,7 @@ export const GPACalculator = ()=>{
         setIsOpen={()=>setIsDialogOpen(isOpen=>!isOpen)}
         handleSave={(value: number)=>handleAddNewCredits(value)}
       />
-      <GPALookup open={isDrawerOpen} setIsOpen={()=>setIsDrawerOpen(!open)} gpa={GPA} />
+      <GPALookup open={isDrawerOpen} setIsOpen={()=>setIsDrawerOpen(open=>!open)} gpa={GPA} />
     </div>
   )
 }
