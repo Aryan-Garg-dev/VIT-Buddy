@@ -12,7 +12,7 @@ export const Discussions = ()=>{
         repo={`${process.env.USERNAME}/${process.env.REPO}`}
         repoId={process.env.REPO_ID || ''}
         category="General"
-        categoryId={process.env.CATEGORY_ID || ''}
+        categoryId={process.env.CATEGORY_ID}
         mapping="title"
         term="Welcome to Discussions"
         reactionsEnabled="0"
