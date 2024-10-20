@@ -1,3 +1,4 @@
+import { Discussions } from "@/components/Discussions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle } from "@/components/ui/drawer";
@@ -58,50 +59,53 @@ export const CGPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
-        <CardHeader>
-          <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">CGPA Calculator</CardTitle>
-          <CardDescription className="font-josephinBold text-xl md:text-2xl text-center">
-            Enter the GPA obtained and total credits for each semester.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <TotalSemCredits GPACreditsList={GPACreditsList} />
-          {GPACreditsList.map((_, index)=>(
-            <GPACreditsInput 
-              key={index}
-              index={index+1}
-              onCreditsChange={(credits: number)=>handleCreditsChange(index, credits)}
-              onGPAChange={(GPA: number)=>handleGPAChange(index, GPA)}
-              onDelete={()=>handleDelete(index)}
-              GPACreditList={GPACreditsList}
-            />
-          ))}
-        </CardContent>
-        <CardFooter className="grid grid-cols-3 content-between md:mx-8 max-sm:grid-cols-2 gap-4">
-          <Button 
-            variant={"secondary"} 
-            className="font-semibold text-muted-foreground max-sm:order-1" 
-            onClick={()=>handleAddMore(0, 0)}
-          >
-            Add More
-          </Button>
-          <Button 
-            variant={"secondary"} 
-            className="font-poppins font-semibold text-muted-foreground max-sm:order-3 max-sm:col-span-2" 
-            onClick={handleCalculateCGPA}
-          >
-            Calculate CGPA
-          </Button>
-          <Button 
-            variant={"secondary"} 
-            className="font-poppins font-semibold text-muted-foreground max-sm:order-2" 
-            onClick={handleReset}
-          >
-            Reset
-          </Button>
-        </CardFooter>
-      </Card>
+      <div className="w-fit lg:min-w-[50%] max-w-[700px]">
+        <Card className="bg-primary-foreground mt-2 mx-2 select-none">
+          <CardHeader>
+            <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">CGPA Calculator</CardTitle>
+            <CardDescription className="font-josephinBold text-xl md:text-2xl text-center">
+              Enter the GPA obtained and total credits for each semester.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <TotalSemCredits GPACreditsList={GPACreditsList} />
+            {GPACreditsList.map((_, index)=>(
+              <GPACreditsInput 
+                key={index}
+                index={index+1}
+                onCreditsChange={(credits: number)=>handleCreditsChange(index, credits)}
+                onGPAChange={(GPA: number)=>handleGPAChange(index, GPA)}
+                onDelete={()=>handleDelete(index)}
+                GPACreditList={GPACreditsList}
+              />
+            ))}
+          </CardContent>
+          <CardFooter className="grid grid-cols-3 content-between md:mx-8 max-sm:grid-cols-2 gap-4">
+            <Button 
+              variant={"secondary"} 
+              className="font-semibold text-muted-foreground max-sm:order-1" 
+              onClick={()=>handleAddMore(0, 0)}
+            >
+              Add More
+            </Button>
+            <Button 
+              variant={"secondary"} 
+              className="font-poppins font-semibold text-muted-foreground max-sm:order-3 max-sm:col-span-2" 
+              onClick={handleCalculateCGPA}
+            >
+              Calculate CGPA
+            </Button>
+            <Button 
+              variant={"secondary"} 
+              className="font-poppins font-semibold text-muted-foreground max-sm:order-2" 
+              onClick={handleReset}
+            >
+              Reset
+            </Button>
+          </CardFooter>
+        </Card>
+        <Discussions />
+      </div>
       <CGPALookup open={isDrawerOpen} setIsOpen={()=>setIsDrawerOpen(open=>!open)} cgpa={CGPA} />
     </div>
   )

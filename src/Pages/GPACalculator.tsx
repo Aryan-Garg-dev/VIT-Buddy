@@ -70,6 +70,7 @@ import { useTheme } from "@/components/theme-provider"
 import { calculateGPA } from './../lib/services/gpaCalculator';
 import GradualSpacing from "@/components/ui/gradual-spacing"
 import { useIsMobile } from "@/hooks/useIsMobile"
+import { Discussions } from "@/components/Discussions"
 
 const baseList: GradeCreditList = Array(5).fill(null).map(()=>({ Grade: "", Credits: 0 }));
 const baseColorsList: string[] = Array(baseList.length).fill(""); 
@@ -155,7 +156,8 @@ export const GPACalculator = ()=>{
 
   return (
     <div className="min-h-full flex flex-col items-center">
-      <Card className="bg-primary-foreground lg:min-w-[50%] max-w-[700px] mt-2 mx-2 select-none">
+      <div className="w-fit lg:min-w-[50%] max-w-[700px]">
+      <Card className="bg-primary-foreground mt-2 mx-2 select-none">
         <ContextMenu>
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
@@ -222,6 +224,8 @@ export const GPACalculator = ()=>{
           </ContextMenuContent>
         </ContextMenu>
       </Card>
+      <Discussions />
+      </div>
       <AddNewCredits 
         isOpen={isDialogOpen} 
         setIsOpen={()=>setIsDialogOpen(isOpen=>!isOpen)}
