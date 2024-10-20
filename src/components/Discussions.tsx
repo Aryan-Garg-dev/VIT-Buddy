@@ -9,10 +9,10 @@ export const Discussions = ()=>{
       <CardTitle className="text-center font-poppins overline text-2xl mb-2 text-gray-700 dark:text-primary">Discussion</CardTitle>
       <Giscus
         id="comments"
-        repo={`${process.env.USERNAME}/${process.env.REPO}`}
-        repoId={process.env.REPO_ID || ''}
+        repo={"Aryan-Garg-dev/VIT-Buddy"}
+        repoId={"R_kgDOM7_y6w"}
         category="General"
-        categoryId={process.env.CATEGORY_ID}
+        categoryId={"DIC_kwDOM7_y684CjhhY"}
         mapping="title"
         term="Welcome to Discussions"
         reactionsEnabled="0"
