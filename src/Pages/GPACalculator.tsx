@@ -161,8 +161,8 @@ export const GPACalculator = ()=>{
         <ContextMenu>
           <ContextMenuTrigger disabled={isMobile}>
             <CardHeader>
-              <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">GPA Calculator</CardTitle>
-              <CardDescription className="font-josephinBold text-xl md:text-2xl text-center">Enter your grades and credits for each subject completed this semester!</  CardDescription>
+              <CardTitle className="font-title text-3xl md:text-4xl text-center tracking-wide">GPA Calculator</CardTitle>
+              <CardDescription className="sm:px-4 md:px-6 font-poppins font-medium text-md md:text-lg text-center">Enter your grades and credits for each subject completed this semester!</  CardDescription>
             </CardHeader>
             {/* Scrollable */}
             <CardContent className="space-y-2">

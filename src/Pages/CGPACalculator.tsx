@@ -62,8 +62,8 @@ export const CGPACalculator = ()=>{
       <div className="w-fit lg:min-w-[50%] max-w-[700px]">
         <Card className="bg-primary-foreground mt-2 mx-2 select-none">
           <CardHeader>
-            <CardTitle className="font-cursive text-4xl md:text-5xl text-center tracking-wide">CGPA Calculator</CardTitle>
-            <CardDescription className="font-josephinBold text-xl md:text-2xl text-center">
+            <CardTitle className="font-title text-3xl md:text-4xl text-center tracking-wide">CGPA Calculator</CardTitle>
+            <CardDescription className="font-poppins font-medium text-md md:text-lg text-center">
               Enter the GPA obtained and total credits for each semester.
             </CardDescription>
           </CardHeader>
