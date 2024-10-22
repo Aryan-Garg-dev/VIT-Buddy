@@ -2,6 +2,11 @@ import Giscus from "@giscus/react";
 import { useTheme } from "./theme-provider";
 import { Card, CardTitle } from "./ui/card";
 
+const REPO = import.meta.env.VITE_REPO;
+const USERNAME = import.meta.env.VITE_USERNAME;
+const CATEGORY_ID = import.meta.env.VITE_CATEGORY_ID;
+const REPO_ID = import.meta.env.VITE_REPO_ID;
+
 export const Discussions = ()=>{
   const { theme } = useTheme();
   return (
@@ -9,10 +14,10 @@ export const Discussions = ()=>{
       <CardTitle className="text-center font-poppins overline text-2xl mb-2 text-gray-700 dark:text-primary">Discussion</CardTitle>
       <Giscus
         id="comments"
-        repo={"Aryan-Garg-dev/VIT-Buddy"}
-        repoId={"R_kgDOM7_y6w"}
+        repo={`${REPO}/${USERNAME}`}
+        repoId={REPO_ID}
         category="General"
-        categoryId={"DIC_kwDOM7_y684CjhhY"}
+        categoryId={CATEGORY_ID}
         mapping="title"
         term="Welcome to Discussions"
         reactionsEnabled="0"
